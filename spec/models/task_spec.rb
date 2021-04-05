@@ -14,7 +14,11 @@ RSpec.describe Task, type: :model do
       expect(task_without_title.errors[:title]).to eq ["can't be blank"]
     end
 
+　　 03_system_spec
     it 'is invalid without status' do
+
+    it "is invalid without a status" do
+　　 develop
       task_without_status = build(:task, status: nil)
       expect(task_without_status).to be_invalid
       expect(task_without_status.errors[:status]).to eq ["can't be blank"]
